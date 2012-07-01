@@ -1,0 +1,111 @@
+<% content_for(:title) { "About Us"} %>
+
+<html lang="en">
+	<head>
+		<meta charset=utf-8>
+		<title>SciAnts - About</title>
+		<link rel="icon" type="image/png" href="../images/favicon.png">
+		<link rel="stylesheet" href="http://meyerweb.com/eric/tools/css/reset/reset.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="../style/project.css" type="text/css" media="screen" />
+	</head>
+	
+	<body>
+		<div id="container">
+			<a href="/"><%= image_tag "logo_FULL.png", alt: "logo", width: "509px" %></a>
+			
+			<div id="aboutus">
+			
+				<h1>About Us</h1>
+
+				<h2 id="abouth2">SciAnts is built by scientists for scientists. <br /><br /> We&#39;ve struggled with documents, PDFs, data, gel images lost in nooks and crannies. We&#39;re committed to building the best online lab notebook in the world.</h2>
+				
+				<h1>Our Team</h1>
+
+				
+
+					<%= image_tag "denny.jpg", :class => "profpic", alt: "Denny Luan" %> 
+				
+				
+				<div class="sciantist">
+					
+					<h2>Denny Luan</h2>
+					<h3>Founder (SciAnts was his idea!)</h3>
+					<a href="https://www.facebook.com/bippucatbus" target="_blank">
+					<%= image_tag "sm/facebook.png", alt: "fb"%></a>
+
+					<a href="https://twitter.com/#!/dendennny" target="_blank">
+					<%= image_tag "sm/twitter.png", alt: "twitter"%></a>
+					
+					<a href="http://www.linkedin.com/pub/denny-luan/26/9b7/818" target="_blank">
+					<%= image_tag "sm/linkedin.png", alt: "linkedin"%></a>
+			
+				</div>
+				
+				<div class="clear"></div>
+				
+				<%= image_tag "cindy.jpg", :class => "profpic", alt: "Cindy Wu" %> 
+				
+				
+				<div class="sciantist">
+					<h2>Cindy Wu</h2>
+					<h3>Lead Sciantist + Artist</h3>
+
+					<a href="https://www.facebook.com/cindywu123" target="_blank">
+					<%= image_tag "sm/facebook.png", alt: "fb"%></a>
+					
+					<a href="https://twitter.com/#!/cindywu123" target="_blank">
+					<%= image_tag "sm/twitter.png", alt: "twitter"%></a>
+
+					<a href="http://www.linkedin.com/in/cindytwu" target="_blank">
+					<%= image_tag "sm/linkedin.png", alt: "linkedin"%></a>
+				</div>
+				
+				<div class="clear"></div>
+				<%= image_tag "ross.jpg", :class => "profpic", alt: "Ross Hattori" %> 
+				
+				<div class="sciantist">
+					<h2>Ross Hattori</h2>
+					<h3>Architecture + Evernote API</h3>
+					<a href="https://www.facebook.com/ross.hattori" target="_blank">
+					<%= image_tag "sm/facebook.png", alt: "fb"%></a>
+					<!--<a href="" target="_blank"><img src="../images/sm/twitter.png" alt="twitter" /></a>-->
+					<a href="http://www.linkedin.com/in/rosshattori" target="_blank"><%= image_tag "sm/linkedin.png", alt: "linkedin"%></a>
+				</div>
+				
+				<div class="clear"></div>
+				
+				<%= image_tag "sean.jpg", :class => "profpic", alt: "Sean Wu" %> 
+				
+				
+				<div class="sciantist">
+					<h2>Sean Wu</h2>
+					<h3>Back-end PHP Dev + Evernote API</h3>
+					<a href="https://www.facebook.com/seanjosephwu" target="_blank"><%= image_tag "sm/facebook.png", alt: "facebook"%></a>
+					<!--<a href="" target="_blank"><img src="../images/sm/twitter.png" alt="twitter" /></a>-->
+					<!--<a href="" target="_blank"><img src="../images/sm/linkedin.png" alt="linkedin" /></a>-->
+				</div>
+				
+				<div class="clear"></div>
+				
+				<%= image_tag "tim.jpg", :class => "profpic", alt: "Tim Tan" %> 
+				
+				
+				<div class="sciantist">
+					<h2>Tim Tan</h2>
+					<h3>Front-end Dev + Designer</h3>
+					<a href="https://www.facebook.com/getyourTANon" target="_blank"><%= image_tag "sm/facebook.png", alt: "facebook"%></a>
+					<a href="https://twitter.com/#!/itstimtime" target="_blank"><%= image_tag "sm/twitter.png", alt: "twitter"%></a>
+					<a href="http://www.linkedin.com/in/itstimtime" target="_blank"><%= image_tag "sm/linkedin.png", alt: "linkedin"%></a>
+				</div>
+				
+				<div class="clear"></div>
+				
+			</div>
+			
+			<p>Copyright &#169; 2012 SciAnts</p>
+			<p>Created at <a href="http://angelhack.com/">AngelHack Summer 2012</a></p>
+			<h3>Powered by </h3><%= image_tag "evernote.png", :width => "300px", alt: "Evernote" %> 
+			
+		</div>
+	</body>
+</html>
