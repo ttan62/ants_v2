@@ -10,5 +10,5 @@ class CreateNotes < ActiveRecord::Migration
 
       t.timestamps
     end
-  end
+    add_index :notes, :project_id
 end

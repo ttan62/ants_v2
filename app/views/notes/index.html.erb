@@ -2,10 +2,10 @@
 
 <table>
   <tr>
+    <th>Project</th>
     <th>Name</th>
     <th>Description</th>
     <th>User</th>
-    <th>Project</th>
     <th>Note</th>
     <th>Content</th>
     <th></th>
@@ -15,19 +15,19 @@
 
 <% @notes.each do |note| %>
   <tr>
+    <td><%= note.project_id %></td>
     <td><%= note.name %></td>
     <td><%= note.description %></td>
     <td><%= note.user %></td>
-    <td><%= note.project_id %></td>
     <td><%= note.note_id %></td>
     <td><%= note.content %></td>
-    <td><%= link_to 'Show', note %></td>
-    <td><%= link_to 'Edit', edit_note_path(note) %></td>
-    <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', [@project, note] %></td>
+    <td><%= link_to 'Edit', edit_note_path(@project, note) %></td>
+    <td><%= link_to 'Destroy', [@project, note], method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Note', new_note_path %>
+<%= link_to 'New Note', new_project_note_path(@project) %>

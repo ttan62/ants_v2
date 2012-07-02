@@ -2,7 +2,8 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
-    @notes = Note.all
+    @project = Projects.find(params[:project_id])
+    @note = @project.notes.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +14,8 @@ class NotesController < ApplicationController
   # GET /notes/1
   # GET /notes/1.json
   def show
-    @note = Note.find(params[:id])
+    @project = Projects.find(params[:project_id])
+    @note = @project.notes.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +26,8 @@ class NotesController < ApplicationController
   # GET /notes/new
   # GET /notes/new.json
   def new
-    @note = Note.new
+    @project = Projects.find(params[:project_id])
+    @note = @project.notes.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,18 +37,20 @@ class NotesController < ApplicationController
 
   # GET /notes/1/edit
   def edit
-    @note = Note.find(params[:id])
+    @project = Projects.find(params[:project_id])
+    @note = @project.notes.find(params[:id])
   end
 
   # POST /notes
   # POST /notes.json
   def create
-    @note = Note.new(params[:note])
+    @project = Projects.find(params[:project_id])
+    @note = @project.notes.new(params[:note])
 
     respond_to do |format|
       if @note.save
-        format.html { redirect_to @note, notice: 'Note was successfully created.' }
-        format.json { render json: @note, status: :created, location: @note }
+        format.html { redirect_to [@project, note], notice: 'Note was successfully created.' }
+        format.json { render json: [@project, note], status: :created, location: [@project, note] }
       else
         format.html { render action: "new" }
         format.json { render json: @note.errors, status: :unprocessable_entity }
@@ -56,11 +61,12 @@ class NotesController < ApplicationController
   # PUT /notes/1
   # PUT /notes/1.json
   def update
-    @note = Note.find(params[:id])
+    @project = Projects.find(params[:project_id])
+    @note = @project.notes.find(params[:id])
 
     respond_to do |format|
-      if @note.update_attributes(params[:note])
-        format.html { redirect_to @note, notice: 'Note was successfully updated.' }
+      if @note.update_attributes(params[@project, note])
+        format.html { redirect_to [@project, note], notice: 'Note was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -72,7 +78,8 @@ class NotesController < ApplicationController
   # DELETE /notes/1
   # DELETE /notes/1.json
   def destroy
-    @note = Note.find(params[:id])
+    @project = Projects.find(params[:project_id])
+    @note = @project.notes.find(params[:id])
     @note.destroy
 
     respond_to do |format|
