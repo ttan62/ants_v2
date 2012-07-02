@@ -1,35 +1,42 @@
-<p id="notice"><%= notice %></p>
+<% content_for(:title) {"The only notebook you'll ever need" } %>
 
-<p>
-  <b>Name:</b>
-  <%= @note.name %>
-</p>
+	<% content_for :content do %>
+	<% end %>
 
-<p>
-  <b>Description:</b>
-  <%= @note.description %>
-</p>
+	<div class="container">
 
-<p>
-  <b>User:</b>
-  <%= @note.user %>
-</p>
+		<p id="notice"><%= notice %></p>
 
-<p>
-  <b>Project:</b>
-  <%= @note.project_id %>
-</p>
+		<h1><%= @note.name %></h1>
+	
+		<br />
 
-<p>
-  <b>Note:</b>
-  <%= @note.note_id %>
-</p>
-
-<p>
-  <b>Content:</b>
-  <%= @note.content %>
-</p>
+		<h2>Description:</h2>
+		<p><%= @note.description %></p>
 
 
-<%= link_to 'Edit', edit_project_notes_path(@note) %> |
-<%= link_to 'Back', project_notes_path %>
+		<h2>User:</h2>
+		<p><%= @note.user %></p>
+
+
+
+		<h2>Project:</h2>
+		<p><%= @note.project_id %></p>
+
+		<h2>Note:</h2>
+		<p><%= @note.note_id %></p>
+
+		<h2>Content:</h2>
+		<p><%= @note.content %></p>
+
+
+		<button><%= link_to 'Edit', edit_note_path(@note) %></button>
+		<button><%= link_to 'Back', notes_path %></button>
+		
+		<br /><br /><br /><br /><br />
+		
+		<h2>For SciAnts!</h2>
+		<a href="/pages/home">Demo Home</a> | Created at <a href="http://angelhack.com/">AngelHack Summer 2012</a>
+		<h3>Powered by </h3><%= image_tag "evernote.png", :width => "250px", alt: "Evernote" %>
+
+	</div>
