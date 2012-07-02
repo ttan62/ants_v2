@@ -1,20 +1,33 @@
-<p id="notice"><%= notice %></p>
+<% content_for(:title) {"The only notebook you'll ever need" } %>
 
-<p>
-  <b>Name:</b>
-  <%= @project.name %>
-</p>
+	<% content_for :content do %>
+	<% end %>
 
-<p>
-  <b>Description:</b>
-  <%= @project.description %>
-</p>
+	<div class="container">
 
-<p>
-  <b>User:</b>
-  <%= @project.user %>
-</p>
+		<p id="notice"><%= notice %></p>
 
+		<h1><%= @project.name %></h1>
+		
+		<br />
+		
+		<h2>Description:</h2>
+		  <p><%= @project.description %></p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+		<br />
+		
+		<h2>User:</h2>
+		  <p><%= @project.user %></p>
+
+		<br />
+
+		<%= link_to 'Edit', edit_project_path(@project) %> |
+		<%= link_to 'Back', projects_path %>
+		
+		<br /><br /><br /><br /><br />
+		
+		<h2>For SciAnts!</h2>
+		<a href="/pages/home">Demo Home</a> | Created at <a href="http://angelhack.com/">AngelHack Summer 2012</a>
+		<h3>Powered by </h3><%= image_tag "evernote.png", :width => "250px", alt: "Evernote" %>
+
+	</div>

@@ -7,31 +7,42 @@ body {
 	background-repeat: repeat-x;
 }
 
-h1 {
-	font-size: 2em;
+.container h1 {
+	font-size: 2.4em;
 }
 
-h2 {
+.container h2 {
 	font-size: 1.5em;
 }
 
-h1 , h2 {
+.container h1 , h2 {
 	font-family: ArcherPro, Sans-Serif;
 }
 
-h1, h2, h3, p, ul, ol {
+.container h1, h2, h3, p, ul, ol {
 	margin-bottom: 5px;
 }
 
-a {
+.container a {
 	color: #ef417b;
+	text-decoration: none;
 }
 
-a:hover {
+.container a:hover {
+	color: #079583;
+	text-decoration: none;
+	background-color: transparent;
+}
+
+.container a:visited {
+	color: #005d89;
+}
+
+.container a:visited:hover {
 	color: #079583;
 }
 
-li {
+.container li {
 	margin-top: 5px;
 	margin-bottom: 5px;
 	margin-left: 18px;
@@ -52,10 +63,10 @@ li {
 
 #ants {
 	position: absolute;
-	z-index:10;
+	z-index:8;
 }
 
-#container {
+.container{
 	margin-top: 25px;
 	margin-bottom: 50px;
 	width: 1200px;
@@ -73,13 +84,23 @@ li {
 
 #copy {
 	position: relative;
+	width: 700px;
+	color: black;
 	margin-top: 500px;
 	margin-left: 120px;
 	z-index:9;
 }
 
-#editing button {
-	
+#copy a {
+	color: #D3D3D3;
+}
+
+#copy a:hover {
+	color: #f13d25;
+}
+
+#copy h2 {
+	color: #82da6f;
 }
 
 #footer {
@@ -96,12 +117,22 @@ li {
 	z-index:1;
 }
 
-#logo {
+#main_logo {
 	margin-bottom: 30px;
 }
 
 #note_body {
 	width: 800px;
+}
+
+#project_name, #project_desc, #project_user { 
+	text-align: left; 
+}
+
+#project_description {
+	width: 300px;
+	height: 85px;
+	vertical-align: text-top;
 }
 
 #red, #blue, #green {
@@ -247,6 +278,7 @@ li {
 .sciantist h3 {
 	font-style:italic;
 	margin-bottom: 10px;
+	font-size: .85em;
 }
 
 .sciantist img {
@@ -258,6 +290,7 @@ li {
 	opacity:1;
 	filter:alpha(opacity=100);
 }
+
 
 /* Special */
 
