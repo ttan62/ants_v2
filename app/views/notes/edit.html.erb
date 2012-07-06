@@ -8,9 +8,11 @@
 		<h1>Editing note</h1>
 
 		<%= render 'form' %>
-
-		<button><%= link_to 'Show', @note %></button>
-		<button><%= link_to 'Back', notes_path %></button>
+<!--
+		<button><%= link_to 'Show', project_note_path(@note.project, @note) %></button>
+		<button><%= link_to 'Back', project_notes_path(@note.project) %></button> !-->
+		<%= link_to 'Show', project_note_path(@note.project, @note) %>
+		<%= link_to 'Back', project_notes_path(@note.project) %>
 		
 		<br /><br /><br /><br /><br />
 		

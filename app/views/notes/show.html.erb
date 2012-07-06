@@ -29,9 +29,11 @@
 		<h2>Content:</h2>
 		<p><%= @note.content %></p>
 
-
-		<button><%= link_to 'Edit', edit_note_path(@note) %></button>
-		<button><%= link_to 'Back', notes_path %></button>
+		<!--
+		<button><%= link_to 'Edit', edit_project_note_path(@note) %></button>
+		<button><%= link_to 'Back', project_notes_path %></button> !-->
+		<%= link_to 'Edit', edit_project_note_path(@note.project, @note) %>
+		<%= link_to 'Back', project_notes_path(@note.project) %>
 		
 		<br /><br /><br /><br /><br />
 		

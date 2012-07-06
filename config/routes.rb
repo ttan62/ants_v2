@@ -1,12 +1,9 @@
 AntsV2::Application.routes.draw do
   get "pages/home"
 
-  
-
   resources :projects do
     resources :notes
   end
-  
 
   match '/about' => 'pages#about'
   root to: 'pages#home'

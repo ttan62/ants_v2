@@ -31,16 +31,19 @@
 		    <td><%= note.project_id %></td>
 		    <td><%= note.note_id %></td>
 		    <td><%= note.content %></td>
-		    <td><button><%= link_to 'Show', note %></button></td>
-		    <td><button><%= link_to 'Edit', edit_note_path(note) %></button></td>
-		    <td><button><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+		<!--    <td><button><%= link_to 'Show', project_note_path(note.project, note) %></button></td>
+		    <td><button><%= link_to 'Edit', edit_project_note_path(note.project, note) %></button></td>
+		    <td><button><%= link_to 'Destroy', project_note_path(note.project, note), method: :delete, data: { confirm: 'Are you sure?' } %></button></td> !-->
+		    <td><%= link_to 'Show', project_note_path(note.project, note) %></td>
+		    <td><%= link_to 'Edit', edit_project_note_path(note.project, note) %></td>
+		    <td><%= link_to 'Destroy', project_note_path(note.project, note), method: :delete, data: { confirm: 'Are you sure?' } %></td>
 		  </tr>
 		<% end %>
 		</table>
 
 		<br />
 
-		<button><%= link_to 'New Note', new_note_path %></button>
+		<%= link_to 'New Note', new_project_note_path(@project) %>
 
 		<br /><br /><br /><br /><br />
 		

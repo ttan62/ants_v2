@@ -14,7 +14,8 @@
 				<th id="project_name" width="15%"><h2>Name</h2></th>
 				<th id="project_desc" width="60%"><h2>Description</h2></th>
 				<th id="project_user" width="10%"><h2>User</h2></th>
-				<th></th>
+				<th id="project_user" width="10%"><h2>Notes</h2></th>
+
 				<th></th>
 				<th></th>
 			</tr>
@@ -24,9 +25,10 @@
 				<td><%= project.name %></td>
 				<td><%= project.description %></td>
 				<td><%= project.user %></td>
-				<td id="project_show"><button><%= link_to 'View', project %></button></td>
-				<td id="project_edit"><button><%= link_to 'Edit', edit_project_path(project) %></button></td>
-				<td id="project_destroy"><button><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+				<td><%= project.notes.length %> <%= "Note".pluralize(project.notes.length) %></td>
+				<td id="project_show"><%= link_to 'View', project %></td>
+				<td id="project_edit"><%= link_to 'Edit', edit_project_path(project) %></td>
+				<td id="project_destroy"><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 			</tr>
 			<% end %>
 		</table>
