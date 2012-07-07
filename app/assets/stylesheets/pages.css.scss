@@ -24,29 +24,29 @@ body {
 }
 
 .container a {
-	color: #ef417b;
+	color: #005d89;
 	text-decoration: none;
 }
 
 .container a:hover {
-	color: #079583;
+	color: #ef417b;
 	text-decoration: none;
 	background-color: transparent;
 }
 
 .container a:visited {
-	color: #005d89;
+	color: #f13d25;
 }
 
 .container a:visited:hover {
-	color: #079583;
+	color: #005d89;
 }
 
 .container li {
 	margin-top: 5px;
 	margin-bottom: 5px;
 	margin-left: 18px;
-	list-style-type:square;
+	list-style-type: square;
 }
 
 
@@ -64,15 +64,6 @@ body {
 #ants {
 	position: absolute;
 	z-index:8;
-}
-
-.container{
-	margin-top: 25px;
-	margin-bottom: 50px;
-	width: 1200px;
-	margin-left: auto;
-	margin-right: auto;
-	font-family: ProximaNova, Sans-Serif;
 }
 
 #cool {
@@ -119,6 +110,10 @@ body {
 
 #main_logo {
 	margin-bottom: 30px;
+}
+
+#new_project {
+	margin-bottom: 50px;
 }
 
 #note_body {
@@ -214,6 +209,18 @@ table {
 	height: 20px;
 }
 
+.container {
+	margin-top: 25px;
+	margin-bottom: 50px;
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: ProximaNova, Sans-Serif;
+}
+
+.demo_footer {
+}
+
 .edit {
 	margin-left: 3px;
 	margin-right: 3px;
@@ -250,7 +257,7 @@ table {
 }
 
 .projects {
-	width: 414px;
+	width: 223px;
 	height: 200px;
 	border: 2px solid gray;
 	float: left;
@@ -259,6 +266,10 @@ table {
 	padding: 8px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
+}
+
+.projects h1 {
+	line-height: 100%;
 }
 
 .project-right {

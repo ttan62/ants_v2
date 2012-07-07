@@ -8,39 +8,31 @@
 		<h1>Projects</h1>
 		
 		<br /><br />
-
-		<table>
-			<tr>
-				<th id="project_name" width="15%"><h2>Name</h2></th>
-				<th id="project_desc" width="60%"><h2>Description</h2></th>
-				<th id="project_user" width="10%"><h2>User</h2></th>
-				<th id="project_user" width="10%"><h2>Notes</h2></th>
-
-				<th></th>
-				<th></th>
-			</tr>
-
-			<% @projects.each do |project| %>
-			<tr>
-				<td><%= project.name %></td>
-				<td><%= project.description %></td>
-				<td><%= project.user %></td>
-				<td><%= project.notes.length %> <%= "Note".pluralize(project.notes.length) %></td>
-				<td id="project_show"><%= link_to 'View', project %></td>
-				<td id="project_edit"><%= link_to 'Edit', edit_project_path(project) %></td>
-				<td id="project_destroy"><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-			</tr>
-			<% end %>
-		</table>
-
+		
+		<button id="new_project" type="button"><%= link_to 'New Project', new_project_path %></button>
+		
 		<br />
-
-		<button><%= link_to 'New Project', new_project_path %></button>
 		
-		<br /><br /><br /><br /><br />
+		<% @projects.each do |project| %>
+			<div class="projects">
+				<div class="project-right">
+					
+					<button type="button"><%= link_to 'Edit', edit_project_path(project) %></button><br />
+					<button type="button"><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+			
+				</div>
+			
+				<h1><%= project.name %></h1>
+				<h2><%= project.user %></h2>
+				<h3><%= project.description %></h3>
+			</div>
+		<% end %>
 		
-		<h2>For SciAnts!</h2>
-		<a href="/pages/home">Demo Home</a> | Created at <a href="http://angelhack.com/">AngelHack Summer 2012</a>
-		<h3>Powered by </h3><%= image_tag "evernote.png", :width => "250px", alt: "Evernote" %>
-
-</div>
+		<div class="clear"></div>
+		
+		<div class="demo_footer">
+			<h2>For SciAnts!</h2>
+			<a href="/pages/home">Demo Home</a> | Created at <a href="http://angelhack.com/">AngelHack Summer 2012</a>
+			<h3>Powered by </h3><%= image_tag "evernote.png", :width => "250px", alt: "Evernote" %>
+		</div>		
+	</div>
