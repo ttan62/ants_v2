@@ -7,6 +7,7 @@ AntsV2::Application.routes.draw do
 
 
   match '/about' => 'pages#about'
+  match '/test' => 'pages#test'
   root to: 'pages#home'
 
   # The priority is based upon order of creation:
