@@ -1,6 +1,23 @@
-<h1>Editing project</h1>
+<% content_for(:title) {"The only notebook you'll ever need" } %>
 
-<%= render 'form' %>
+	<% content_for :content do %>
+	<% end %>
 
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+	<div class="container">
+
+		<h1>Edit Project</h1>
+		
+		<br />
+
+		<%= render 'form' %>
+
+		<button><%= link_to 'Show', @project %></button>
+		<button><%= link_to 'Back', projects_path %></button>
+		
+		<br /><br /><br /><br /><br />
+		
+		<h2>For SciAnts!</h2>
+		<a href="/pages/home">Demo Home</a> | Created at <a href="http://angelhack.com/">AngelHack Summer 2012</a>
+		<h3>Powered by </h3><%= image_tag "evernote.png", :width => "250px", alt: "Evernote" %>
+
+	</div>
