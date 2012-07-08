@@ -252,6 +252,13 @@ table {
 	font-family: ProximaNova, Sans-Serif;
 }
 
+.demo_footer {
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+}
+
 .demo_logo_Sci {
 	color: #f13d25;
 	font-family: ProximaNova, Sans-Serif;
@@ -285,6 +292,11 @@ table {
 	width: 100%;
 }
 
+.note_text {
+	width: 900px;
+	height: 600px;
+}
+
 .notes {
 	border: 2px solid #d1eef3;
 	height: 300px;
@@ -294,6 +306,10 @@ table {
 	margin-bottom: 20px;
 	padding: 5px;
 	background-image: url('http://sciants.co/images/grid.png');
+}
+
+.notes .btn, .projects .btn {
+	margin-right: 4px;
 }
 
 .notes_date {

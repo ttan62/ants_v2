@@ -1,34 +1,32 @@
 <%= form_for(@note, :url => "/projects/#{@note.project_id}/notes/#{@note.id}") do |f| %>
-  <% if @note.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@note.errors.count, "error") %> prohibited this note from being saved:</h2>
+<% if @note.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@note.errors.count, "error") %> prohibited this note from being saved:</h2>
 
-      <ul>
-      <% @note.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+	<ul>
+		<% @note.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+<div class="field">
+	<h1><%= link_to @project.name %>: <%= f.text_field :name %> </h1>
+</div>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
-  </div>
-  <div class="field">
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
-  </div>
-  <%= f.hidden_field :project_id %>
-  <div class="field">
-    <%= f.label :content %><br />
-    <%= f.text_area :content %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<div id="editing">
+	<hr />
+	<%= image_tag "_note_bold.png", :class => 'edit', :height => '17px' %>
+	<%= image_tag "_note_italic.png", :class => 'edit', :height => '17px' %>
+	<%= image_tag "_note_highlighter.png", :class => 'edit', :height => '17px' %>
+	<%= image_tag "up.png", :class => 'edit', :height => '17px' %>
+	<%= image_tag "_note_printer.png", :class => 'edit', :height => '17px' %>
+	<%= image_tag "_note_tag.png", :class => 'edit', :height => '17px' %>
+	<%= image_tag "trash.png", :class => 'edit', :height => '17px' %>
+	<%= f.submit :class => 'btn btn-info' %>
+	<hr />
+</div>
+
+	<%= f.text_area :content, :class => 'note_text' %>
+
 <% end %>
