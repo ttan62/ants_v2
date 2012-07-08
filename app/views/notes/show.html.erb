@@ -1,82 +1,32 @@
 <% content_for(:title) {"The only notebook you'll ever need" } %>
 
 <% content_for :content do %>
-<% end %>
+	<% end %>
 
-<div class="navbar">
-	<div class="navbar-inner">
-		<div class="nav-collapse">
-			<a class="brand" href="/pages/home"><span class="demo_logo_Sci">Sci</span><span class="demo_logo_Ants">Ants</span></a>
+	<div class="container">
 
-			<form class="navbar-search pull-left" action="">
-				<input type="text" class="search-query span2" placeholder="Search">
-			</form>
+		<p id="notice"><%= notice %></p>
 
-			<ul class="nav pull-right">
-				<li><a href="#">User</a></li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">To-Do<b class="caret"></b></a>
-					<ul class="dropdown-menu">
-						<li><a href="#">VERY IMPORTANT</a></li>
-						<li><a href="#">Another action</a></li>
-						<li><a href="#">Something else here</a></li>
+		<h1><%= @note.name %></h1>
 
-						<li class="divider"></li>
+		<br />
 
-						<li><a href="#">Somewhat important</a></li>
-						<li><a href="#">One more separated link</a></li>
-
-						<li class="divider"></li>
-
-						<li><a href="#">Meh!</a></li>
-						<li><a href="#">End</a></li>
-
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" data-toggle="dropdown">Calendar<b class="caret"></b></a>
-					<ul class="dropdown-menu">
+		<h2>Description:</h2>
+		<p><%= @note.description %></p>
 
 
-					</ul>
-				</li>
-				<li><a href="#">Settings</a></li>
-			</ul>
-		</div>
+		<h2>User:</h2>
+		<p><%= @note.user %></p>
+
+		<h2>Project:</h2>
+		<p><%= @note.project_id %></p>
+
+		<h2>Note:</h2>
+		<p><%= @note.note_id %></p>
+
+		<h2>Content:</h2>
+		<p><%= @note.content %></p>
+
+		<button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_project_note_path(@note.project, @note) %></button>
+		<button type="button" class="btn btn-primary"><%= link_to 'Back', project_notes_path(@note.project) %></button>
 	</div>
-</div>
-
-<div class="container">
-
-	<p id="notice"><%= notice %></p>
-
-	<h1><%= @note.name %></h1>
-
-	<br />
-
-	<h2>Description:</h2>
-	<p><%= @note.description %></p>
-
-
-	<h2>User:</h2>
-	<p><%= @note.user %></p>
-
-	<h2>Project:</h2>
-	<p><%= @note.project_id %></p>
-
-	<h2>Note:</h2>
-	<p><%= @note.note_id %></p>
-
-	<h2>Content:</h2>
-	<p><%= @note.content %></p>
-
-	<button type="button" class="btn btn-primary"><%= link_to 'Edit', edit_project_note_path(@note.project, @note) %></button>
-	<button type="button" class="btn btn-primary"><%= link_to 'Back', project_notes_path(@note.project) %></button>
-
-	<br /><br /><br /><br /><br />
-
-	<h2>For SciAnts!</h2>
-	<a href="/pages/home">Demo Home</a> | Created at <a href="http://angelhack.com/">AngelHack Summer 2012</a>
-	<h3>Powered by </h3><%= image_tag "evernote.png", :width => "250px", alt: "Evernote" %>
-
-</div>

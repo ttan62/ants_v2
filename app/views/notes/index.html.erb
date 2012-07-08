@@ -2,84 +2,35 @@
 <% content_for(:title) {"The only notebook you'll ever need" } %>
 
 <% content_for :content do %>
+<% end %>
+
+<div class="container">
+
+	<h1>Project: Notes</h1>
+
+	<button><%= link_to 'Back to Projects', projects_path %></button>
+
+	<br /><br />
+
+	<button type="button" class="btn btn-success"><%= link_to 'New Note', new_project_note_path(@project) %></button>
+
+	<br /><br />
+
+	<% @notes.each do |note| %>
+
+	<div class="notes">
+		<h3><%= note.name %></h3>
+		<p><%= note.description %></p>
+		<p><%= note.user %></p>
+		<p><%= note.project_id %></p>
+		<p><%= note.note_id %></p>
+		<p><%= note.content %></p>
+
+		<button type="button" class="btn"><%= link_to 'View', project_note_path(note.project, note) %></button><br />
+		<button type="button" class="btn"><%= link_to 'Edit', edit_project_note_path(note.project, note) %></button><br />
+		<button type="button" class="btn btn-danger"><%= link_to 'Destroy', project_note_path(note.project, note), method: :delete, data: { confirm: 'Are you sure?' } %></button>
+
+	</div>
 	<% end %>
 
-	<div class="navbar">
-		<div class="navbar-inner">
-			<div class="nav-collapse">
-				<a class="brand" href="/pages/home"><span class="demo_logo_Sci">Sci</span><span class="demo_logo_Ants">Ants</span></a>
-
-				<form class="navbar-search pull-left" action="">
-					<input type="text" class="search-query span2" placeholder="Search">
-				</form>
-
-				<ul class="nav pull-right">
-					<li><a href="#">User</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">To-Do<b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">VERY IMPORTANT</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-
-							<li class="divider"></li>
-
-							<li><a href="#">Somewhat important</a></li>
-							<li><a href="#">One more separated link</a></li>
-
-							<li class="divider"></li>
-
-							<li><a href="#">Meh!</a></li>
-							<li><a href="#">End</a></li>
-
-						</ul>
-					</li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Calendar<b class="caret"></b></a>
-						<ul class="dropdown-menu">
-
-
-						</ul>
-					</li>
-					<li><a href="#">Settings</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-
-	<div class="container">
-
-		<h1>Project: Notes</h1>
-
-		<button><%= link_to 'Back to Projects', projects_path %></button>
-		
-		<br /><br />
-
-		<button type="button" class="btn btn-success"><%= link_to 'New Note', new_project_note_path(@project) %></button>
-
-		<br /><br />
-
-			<% @notes.each do |note| %>
-
-			<div class="notes">
-				<h3><%= note.name %></h3>
-				<p><%= note.description %></p>
-				<p><%= note.user %></p>
-				<p><%= note.project_id %></p>
-				<p><%= note.note_id %></p>
-				<p><%= note.content %></p>
-				
-				<button type="button" class="btn"><%= link_to 'View', project_note_path(note.project, note) %></button><br />
-				<button type="button" class="btn"><%= link_to 'Edit', edit_project_note_path(note.project, note) %></button><br />
-				<button type="button" class="btn btn-danger"><%= link_to 'Destroy', project_note_path(note.project, note), method: :delete, data: { confirm: 'Are you sure?' } %></button>
-
-				</div>
-				<% end %>
-
-				<div class="clear"></div>
-
-				<h2>For SciAnts!</h2>
-				<a href="/pages/home">Demo Home</a> | Created at <a href="http://angelhack.com/">AngelHack Summer 2012</a>
-				<h3>Powered by </h3><%= image_tag "evernote.png", :width => "250px", alt: "Evernote" %>
-
-			</div>
+</div>

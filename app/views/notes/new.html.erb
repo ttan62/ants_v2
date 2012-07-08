@@ -1,63 +1,20 @@
 <% content_for(:title) {"The only notebook you'll ever need" } %>
 
-	<% content_for :content do %>
-	<% end %>
-	
-	<div class="navbar">
-		<div class="navbar-inner">
-			<div class="nav-collapse">
-				<a class="brand" href="/pages/home"><span class="demo_logo_Sci">Sci</span><span class="demo_logo_Ants">Ants</span></a>
+<% content_for :content do %>
+<% end %>
 
-				<form class="navbar-search pull-left" action="">
-					<input type="text" class="search-query span2" placeholder="Search">
-				</form>
+<div class="container">
 
-				<ul class="nav pull-right">
-					<li><a href="#">User</a></li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">To-Do<b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">VERY IMPORTANT</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
+	<h1>New Note</h1>
 
-							<li class="divider"></li>
+	<%= render 'form' %>
 
-							<li><a href="#">Somewhat important</a></li>
-							<li><a href="#">One more separated link</a></li>
+	<%= link_to 'Back', project_notes_path(@note.project) %>
 
-							<li class="divider"></li>
+	<br /><br /><br /><br /><br />
 
-							<li><a href="#">Meh!</a></li>
-							<li><a href="#">End</a></li>
+	<h2>For SciAnts!</h2>
+	<a href="/pages/home">Demo Home</a> | Created at <a href="http://angelhack.com/">AngelHack Summer 2012</a>
+	<h3>Powered by </h3><%= image_tag "evernote.png", :width => "250px", alt: "Evernote" %>
 
-						</ul>
-					</li>
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Calendar<b class="caret"></b></a>
-						<ul class="dropdown-menu">
-
-
-						</ul>
-					</li>
-					<li><a href="#">Settings</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-
-	<div class="container">
-
-		<h1>New Note</h1>
-
-		<%= render 'form' %>
-
-		<%= link_to 'Back', project_notes_path(@note.project) %>
-		
-		<br /><br /><br /><br /><br />
-		
-		<h2>For SciAnts!</h2>
-		<a href="/pages/home">Demo Home</a> | Created at <a href="http://angelhack.com/">AngelHack Summer 2012</a>
-		<h3>Powered by </h3><%= image_tag "evernote.png", :width => "250px", alt: "Evernote" %>
-
-	</div>
+</div>
