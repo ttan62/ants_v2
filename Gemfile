@@ -37,3 +37,8 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+# Add Evernote Ruby SDK and Thrift
+gem 'thrift', :git => "git://github.com/mavin/thrift-rb.git", :branch => "0.8.x"
+gem 'thrift_client'
+gem 'evernote'
