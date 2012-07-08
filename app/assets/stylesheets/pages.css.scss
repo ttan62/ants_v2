@@ -23,22 +23,22 @@ body {
 	margin-bottom: 5px;
 }
 
-.container a {
+.link {
 	color: #005d89;
 	text-decoration: none;
 }
 
-.container a:hover {
+.link:hover {
 	color: #ef417b;
 	text-decoration: none;
 	background-color: transparent;
 }
 
-.container a:visited {
+.link:visited {
 	color: #f13d25;
 }
 
-.container a:visited:hover {
+.link:visited:hover {
 	color: #005d89;
 }
 
@@ -47,6 +47,22 @@ body {
 	margin-bottom: 5px;
 	margin-left: 18px;
 	list-style-type: square;
+}
+
+.new_note {
+	background-image:url('paper.gif');
+}
+
+.projects h1 {
+	font-size: 2em;
+}
+
+.projects h2 {
+	font-size: 1.5em;
+}
+
+.projects h3 {
+	font-size: 1em;
 }
 
 
@@ -204,13 +220,31 @@ table {
 
 /* Classes */
 
+.brand:hover {
+	background: none;
+}
+
+.btn a, .btn a:visited, .btn a:hover, , .btn a:active {
+	color: black;
+	text-decoration: none;
+	background: none;
+}
+
+.btn-success a, .btn-success a:visited, .btn-success a:hover, , .btn-success a:active,
+.btn-primary a, .btn-primary a:visited, .btn-primary a:hover, , .btn-primary a:active,
+.btn-danger a, .btn-danger a:visited, .btn-danger a:hover, , .btn-danger a:active {
+	color: white;
+	text-decoration: none;
+	background: none;
+}
+
 .clear {
 	clear: both;
 	height: 20px;
 }
 
 .container {
-	margin-top: 25px;
+	margin-top: 5px;
 	margin-bottom: 50px;
 	width: 1200px;
 	margin-left: auto;
@@ -218,7 +252,14 @@ table {
 	font-family: ProximaNova, Sans-Serif;
 }
 
-.demo_footer {
+.demo_logo_Sci {
+	color: #f13d25;
+	font-family: ProximaNova, Sans-Serif;
+}
+
+.demo_logo_Ants {
+	color: #005d89;
+	font-family: ProximaNova, Sans-Serif;
 }
 
 .edit {
@@ -231,6 +272,17 @@ table {
 .edit:hover {
 	opacity:1;
 	filter:alpha(opacity=100);
+}
+
+.navbar-inner {
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.navbar-outer {
+	color: #2C2C2C;
+	width: 100%;
 }
 
 .notes {
@@ -257,8 +309,8 @@ table {
 }
 
 .projects {
-	width: 223px;
-	height: 200px;
+	width: 210px;
+	height: 250px;
 	border: 2px solid gray;
 	float: left;
 	margin-right: 35px;
