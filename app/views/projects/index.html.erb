@@ -6,8 +6,15 @@
 	<div class="container">
 
 		<h1>Projects</h1>
-		
-		<br /><br />
+        
+        <%= form_tag projects_path, :method => 'get' do %>
+            <p>
+                <%= text_field_tag :search, params[:search] %>
+                <%= submit_tag "Search", :name => nil %> 
+            </p>
+        <% end %>
+        
+        <br /><br />
 
 		<table>
 			<tr>
@@ -36,7 +43,8 @@
 		<br />
 
 		<button><%= link_to 'New Project', new_project_path %></button>
-		
+
+
 		<br /><br /><br /><br /><br />
 		
 		<h2>For SciAnts!</h2>
