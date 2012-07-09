@@ -43,3 +43,6 @@ gem 'execjs'
 gem 'therubyracer'
 gem 'populator'
 gem 'hirb'
+gem 'nifty-generators', :group => :development
+
+gem "mocha", :group => :test

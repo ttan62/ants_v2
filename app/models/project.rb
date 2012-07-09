@@ -5,7 +5,14 @@ class Project < ActiveRecord::Base
 
   def self.search(search)
     if search
-      find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+      search = "%#{search}%".strip
+      if search != ''
+          find(:all, :conditions => ['name LIKE ? or description LIKE ?', 
+          search,
+          search])
+      else
+        find(:all)
+      end
     else
       find(:all)
     end
