@@ -4,7 +4,7 @@ class NotesController < ApplicationController
   def index
     @project = Project.find(params[:project_id])
     @notes = @project.notes.all
-
+    #@notes = Note.search(params[:search])
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @notes }
