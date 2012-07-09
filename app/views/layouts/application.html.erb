@@ -39,9 +39,41 @@
 					</li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Calendar<b class="caret"></b></a>
-						<ul class="dropdown-menu">
-
-
+						<ul class="dropdown-menu calendar">							
+							<div class="title">July 2012</div>
+							<table border="1">
+							<tr><th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th></tr>
+							<tr><td><span class="date">1</span></td><td><span class="date">2</span></td><td><span class="date">3</span></td><td><span class="date">4</span></td><td><span class="date">5</span></td><td><span class="date">6</span></td><td><span class="date">7</span></td></tr>
+							<tr><td><span class="date">8</span></td><td><span class="date">9</span></td><td><span class="date">10</span></td><td><span class="date">11</span></td><td><span class="date">12</span></td><td><span class="date">13</span></td><td><span class="date">14</span></td></tr>
+							<tr><td><span class="date">15</span></td><td><span class="date">16</span></td><td><span class="date">17</span></td><td><span class="date">18</span></td><td><span class="date">19</span></td><td><span class="date">20</span></td><td><span class="date">21</span></td></tr>
+							<tr><td><span class="date">22</span></td><td><span class="date">23</span></td><td><span class="date">24</span></td><td><span class="date">25</span></td><td><span class="date">26</span></td><td><span class="date">27</span></td><td><span class="date">28</span></td></tr>
+							<tr><td><span class="date">29</span></td><td><span class="date">30</span></td><td><span class="date">31</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td><td><span class="date">&nbsp;</span></td></tr>
+							</table>
+							<!--
+							<li>July 2012</li>
+							<li>S M T W T F S</li>
+							<li>
+							<%
+								for i in 1..31
+									if i % 7 == 1
+							%>
+									</li>
+									<li>
+							<%
+									end
+							%>
+								<%= "#{i}"%>
+							<%
+								end
+							%>
+							</li>
+							
+							<li>1 2 3 4 5 6 7</li>
+							<li>8 9 10 11 12 13 14</li>
+							<li>15 16 17 18 19 20 21</li>
+							<li>22 23 24 25 26 27 28</li>
+							<li>29 30 31</li>
+							-->
 						</ul>
 					</li>
 					<li><a href="#">Settings</a></li>
