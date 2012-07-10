@@ -1,4 +1,6 @@
 AntsV2::Application.routes.draw do
+  resources :tags
+
   get "pages/home"
 
   resources :projects do
