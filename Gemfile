@@ -38,6 +38,7 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 
+
 #My stuff
 
 gem 'execjs'
@@ -47,3 +48,8 @@ gem 'hirb'
 gem 'nifty-generators', :group => :development
 
 gem "mocha", :group => :test
+
+# Add Evernote Ruby SDK and Thrift
+gem 'thrift', :git => "git://github.com/mavin/thrift-rb.git", :branch => "0.8.x"
+gem 'thrift_client'
+gem 'evernote'
