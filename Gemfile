@@ -37,3 +37,13 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+#My stuff
+
+gem 'execjs'
+gem 'therubyracer'
+gem 'populator'
+gem 'hirb'
+gem 'nifty-generators', :group => :development
+
+gem "mocha", :group => :test

@@ -11,7 +11,7 @@
 	<br /><br />
 
 	<button type="button" class="btn btn-success"><%= link_to 'New Note', new_project_note_path(@project) %></button>
-
+	
 	<br /><br />
 
 	<% @notes.each do |note| %>
@@ -24,7 +24,7 @@
 		<p><%= note.note_id %></p>
 		<p><%= note.content %></p>
 
-		<button type="button" class="btn"><%= link_to 'View', project_note_path(note.project, note) %></button><button type="button" class="btn"><%= link_to 'Edit', edit_project_note_path(note.project, note) %></button><button type="button" class="btn btn-danger"><%= link_to 'Destroy', project_note_path(note.project, note), method: :delete, data: { confirm: 'Are you sure?' } %></button>
+		<button type="button" class="btn"><%= link_to 'Open', edit_project_note_path(note.project, note) %></button><button type="button" class="btn btn-danger"><%= link_to 'Delete', project_note_path(note.project, note), method: :delete, data: { confirm: 'Are you sure?' } %></button>
 
 	</div>
 	

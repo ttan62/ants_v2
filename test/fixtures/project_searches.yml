@@ -1,0 +1,13 @@
+one:
+  all: MyString
+  name: MyString
+  description: MyString
+  user: MyString
+  tag: MyString
+
+two:
+  all: MyString
+  name: MyString
+  description: MyString
+  user: MyString
+  tag: MyString

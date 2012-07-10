@@ -1,0 +1,54 @@
+Script started on Sat 07 Jul 2012 12:01:18 PM PDT
+wujsean@wujsean-ThinkPad-X220:~/work/ants_v2/config$ rails c
+Loading development environment (Rails 3.2.6)
+1.9.3p194 :001 > 
+1.9.3p194 :002 >   
+1.9.3p194 :003 >   Proje[K[K[K[K[KPorj[K[K[Kroject.all
+  [1m[36mProject Load (0.1ms)[0m  [1mSELECT "projects".* FROM "projects" [0m
+ => [] 
+1.9.3p194 :004 > notes *[K[K.all
+NameError: undefined local variable or method `notes' for main:Object
+	from (irb):4
+	from /home/wujsean/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.6/lib/rails/commands/console.rb:47:in `start'
+	from /home/wujsean/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.6/lib/rails/commands/console.rb:8:in `start'
+	from /home/wujsean/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.6/lib/rails/commands.rb:41:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+1.9.3p194 :005 > Note.A[Kall
+  [1m[35mNote Load (0.3ms)[0m  SELECT "notes".* FROM "notes" 
+ => [] 
+1.9.3p194 :006 > Note.allnotes.all[1PNote.all[K
+1.9.3p194 :007 >   
+1.9.3p194 :008 >   require 'hirb
+1.9.3p194 :009'> '
+LoadError: cannot load such file -- hirb
+
+	from /home/wujsean/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.6/lib/active_support/dependencies.rb:251:in `require'
+	from /home/wujsean/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.6/lib/active_support/dependencies.rb:251:in `block in require'
+	from /home/wujsean/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.6/lib/active_support/dependencies.rb:236:in `load_dependency'
+	from /home/wujsean/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.6/lib/active_support/dependencies.rb:251:in `require'
+	from (irb):9
+	from /home/wujsean/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.6/lib/rails/commands/console.rb:47:in `start'
+	from /home/wujsean/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.6/lib/rails/commands/console.rb:8:in `start'
+	from /home/wujsean/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.6/lib/rails/commands.rb:41:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+1.9.3p194 :010 > require 'hirb'
+LoadError: cannot load such file -- hirb
+	from /home/wujsean/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.6/lib/active_support/dependencies.rb:251:in `require'
+	from /home/wujsean/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.6/lib/active_support/dependencies.rb:251:in `block in require'
+	from /home/wujsean/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.6/lib/active_support/dependencies.rb:236:in `load_dependency'
+	from /home/wujsean/.rvm/gems/ruby-1.9.3-p194/gems/activesupport-3.2.6/lib/active_support/dependencies.rb:251:in `require'
+	from (irb):10
+	from /home/wujsean/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.6/lib/rails/commands/console.rb:47:in `start'
+	from /home/wujsean/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.6/lib/rails/commands/console.rb:8:in `start'
+	from /home/wujsean/.rvm/gems/ruby-1.9.3-p194/gems/railties-3.2.6/lib/rails/commands.rb:41:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+1.9.3p194 :011 > 
+1.9.3p194 :012 >   
+1.9.3p194 :013 >   exit
+wujsean@wujsean-ThinkPad-X220:~/work/ants_v2/config$ exit
+exit
+
+Script done on Sat 07 Jul 2012 01:00:40 PM PDT

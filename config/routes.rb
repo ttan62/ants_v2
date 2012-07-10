@@ -1,5 +1,7 @@
 AntsV2::Application.routes.draw do
-  resources :tags
+
+  resources :project_searches
+
 
   get "pages/home"
 
@@ -8,6 +10,7 @@ AntsV2::Application.routes.draw do
   end
 
   match '/about' => 'pages#about'
+  match '/test' => 'pages#test'
   root to: 'pages#home'
 
   # The priority is based upon order of creation:

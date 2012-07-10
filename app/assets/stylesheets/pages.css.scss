@@ -26,6 +26,7 @@ body {
 .link {
 	color: #005d89;
 	text-decoration: none;
+	font-family: ArcherPro, Sans-Serif;
 }
 
 .link:hover {
@@ -158,7 +159,7 @@ table {
 #green { background-color: #23a925; }
 
 #search {
-	margin-bottom: 70px;
+	margin-bottom: 0px;
 }
 
 #search_button {
@@ -236,6 +237,14 @@ table {
 	color: white;
 	text-decoration: none;
 	background: none;
+}
+
+.calendar li {
+	list-style: none;
+}
+
+.calendar span {
+	width: 5px;
 }
 
 .clear {

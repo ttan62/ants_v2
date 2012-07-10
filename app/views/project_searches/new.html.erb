@@ -1,0 +1,28 @@
+<% title "New Project Search" %>
+
+<%= form_for @project_search do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :all %><br />
+    <%= f.text_field :all %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </p>
+  <p>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.label :tag %><br />
+    <%= f.text_field :tag %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>
+
+
