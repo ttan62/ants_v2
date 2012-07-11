@@ -1,4 +1,6 @@
 module TestHelper
+end
+=begin #module TestHelper
     #require './user_helper.rb'
     require "digest/md5"
     dir = File.expand_path(File.dirname(__FILE__))
@@ -123,4 +125,4 @@ module TestHelper
 
     puts "Successfully created a new note with GUID: #{createdNote.guid}"
 =end
-end
+
