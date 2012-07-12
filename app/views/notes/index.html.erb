@@ -26,7 +26,7 @@
 
 				<div class="notes">
 					<h3><%= note.name %></h3>
-					<%= note.created_at %>
+					<%= note.created_at.strftime("%b %d %Y") %>
 					<div class="overflow_scroll">
 						<%= note.content %>
 					</div>
