@@ -1,63 +1,66 @@
 <% content_for(:title) {"The only notebook you'll ever need" } %>
 
-	<% content_for :content do %>
-	<% end %>
+<% content_for :content do %>
+<% end %>
 
-	<div class="container">
-		
-	<a href= "/" class="link"><%= image_tag "logo_FULL.png", id: "main_logo", width: "509px", alt: "SciAnts" %></a>
-	
-			<h1>Your lab notebook online</h1>
-				
-			<br>
-			
-		
-			
-		
-			
-			<div id="copy">
-				<h2>The only notebook you&#39;ll ever need.</h2>
-				<p>Sciants makes it easy to sync your lab contents in the cloud, storing things safely and securely. Organize your protocols, papers, and results all in one place, and never deal with lost notes ever again.</p> 
-				
-				<br><br>
-				
+<div class="container">
+
+	<%= image_tag "ant.png", id: "main_ant", alt: "ant", width: "300px" %>
+
+	<div id="logo_tagline">	
+		<%= image_tag "logo_FULL.png", id: "main_logo", width: "700px", alt: "SciAnts" %>
+
+		<h1 id="tagline">your lab notebook online</h1>
+
+		<h1 id="tagline_long">SciAnts makes it easy to sync your notebook in <br /> the cloud, safely and securely.</h1> 
+	</div>
+
+	<br />
+
+	<div id="copy">
+
+		<div class="row">
+
+			<div class="span3">
 				<h2>Search</h2>
-				<p>Do you ever wish you had ‘ctrl + f’ for your lab protocols? Now you do. </p>
-				
+				<p>Do you ever wish you had ‘ctrl + f’ for your lab protocols? Now you do.</p>
+				<%= image_tag "magnifyglass.png", class: "feature_img", alt: "feat1", width: "150px" %>
+			</div>
+
+			<div class="span3">
 				<h2>Collaboration</h2>
-				<p>Manage your shared repositories across platforms with easy access. </p>
+				<p>Manage your shared repositories across platforms with easy access.</p>
+				<%= image_tag "home_image2.png", class: "feature_img", alt: "feat2", width: "150px" %>
+			</div>
 
+			<div class="span3">
 				<h2>Templates</h2>
-				<p>Simple and customizable templates to speed up your science. </p>
+				<p>Simple and customizable templates to speed up your science.</p>
+				<%= image_tag "home_image1.png", class: "feature_img", alt: "feat3", width: "150px" %>
+			</div>
 
+			<div class="span3">
 				<h2>Administration</h2>
-				<p>For large teams, snapshots of progress for your whole group. </p>
+				<p>For large teams, snapshots of progress for your whole group.</p>
+				<%= image_tag "cloud.png", class: "feature_img", alt: "feat4", width: "150px" %>
+			</div>
 
-				<br><br>
-				
-				<h2>Sciants is pricing like it should be: free for groups up to 5 . No setup fees, no licensing fees. Try our demo right meow. </h2>
-				
-				
-				<br><br>
-				
-				<h2>We&#39;re scientists too!</h2>
-				<p>SciAnts is built by scientists for scientists.  We&#39;ve struggled with documents, PDFs, data, gel images lost in nooks and crannies.  We&#39;re committed to building the best online lab notebook in the world.</p>
-				
-				<br>
+			<div class="clear"></div>
 
-				<%= link_to 'Try the Demo Now!', projects_path, :class => "btn" %>
-				
-				
-				<div id="art">
-					<%= image_tag "ants.png", id: "ants", alt: "Ants" %>
-				</div>
+			<hr />
+
+			<div id="pricing_try">
+				<h1 id="pricing">Sciants is pricing like it should be: free for groups up to 5. <br /> No setup fees, no licensing fees. Try our demo right now!</h1>
+
+				<%= link_to 'Try the Demo', projects_path, :class => "btn btn-primary btn-large" %>
+			</div>
+
+			<hr />
+
+			<div id="front_bottom">
 				<h2><a href="/about" class="link">About Us</a></h2>
-				
-				<br><br>
-				
 				<p>Copyright &#169; 2012 SciAnts</p>
-				<p>Created at <a href="http://angelhack.com/">AngelHack Summer 2012</a></p>
-				
 			</div>
 		</div>
-	
+	</div>
+
