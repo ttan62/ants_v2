@@ -221,6 +221,11 @@ table {
 
 /* Classes */
 
+.tabs-left > .nav-tabs .active > a, .tabs-left > .nav-tabs .active > a:hover {
+	border-right-color: #DDD;
+	font-weight: bold;
+}
+
 .brand:hover {
 	background: none;
 }
@@ -290,6 +295,10 @@ table {
 	filter:alpha(opacity=100);
 }
 
+.nav-tabs li {
+	list-style-type: none;
+}
+
 .navbar-inner {
 	width: 1200px;
 	margin-left: auto;
@@ -329,6 +338,12 @@ table {
 	border: 2px solid #ef417b;
 }
 
+.overflow_scroll {
+	height: 175px; 
+	overflow: scroll;
+	margin-bottom: 20px; 
+}
+
 .profpic {
 	float: left;
 }
@@ -354,6 +369,13 @@ table {
 	margin-top: 2px;
 }
 
+.rotate {
+	-webkit-transform: rotate(-90deg); 
+	-moz-transform: rotate(-90deg);
+	height: 150px;
+	margin-right: 0px;
+}
+
 .sciantist {
 	float: left;
 	-moz-border-radius: 10px;
@@ -377,6 +399,11 @@ table {
 .sciantist img:hover {
 	opacity:1;
 	filter:alpha(opacity=100);
+}
+
+.tabs-left > .nav-tabs {
+	border: none;
+	margin-right: 0px;
 }
 
 
