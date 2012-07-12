@@ -11,9 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-
-ActiveRecord::Schema.define(:version => 20120708190631) do
-
+ActiveRecord::Schema.define(:version => 20120709045435) do
 
   create_table "assignments", :force => true do |t|
     t.integer "project_id"
