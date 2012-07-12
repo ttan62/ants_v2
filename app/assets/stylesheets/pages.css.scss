@@ -283,6 +283,10 @@ table {
 	font-family: ProximaNova, Sans-Serif;
 }
 
+.dropdown-menu li {
+	list-style-type: none;
+}
+
 .edit {
 	margin-left: 3px;
 	margin-right: 3px;
@@ -403,7 +407,7 @@ table {
 
 .tabs-left > .nav-tabs {
 	border: none;
-	margin-right: 0px;
+	margin-right: -62px;
 }
 
 
