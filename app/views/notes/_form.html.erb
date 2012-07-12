@@ -16,6 +16,7 @@
 
 <div class="editing">
 	<hr />
+	<div class="btn-toolbar">
 	<%= image_tag "_note_bold.png", :class => 'edit', :height => '17px' %>
 	<%= image_tag "_note_italic.png", :class => 'edit', :height => '17px' %>
 	<%= image_tag "_note_highlighter.png", :class => 'edit', :height => '17px' %>
@@ -23,7 +24,19 @@
 	<%= image_tag "_note_printer.png", :class => 'edit', :height => '17px' %>
 	<%= image_tag "_note_tag.png", :class => 'edit', :height => '17px' %>
 	<%= image_tag "trash.png", :class => 'edit', :height => '17px' %>
+	
+	<div class="btn-group">
+	<button class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Labels <span class="caret"></span></button>
+	          <ul class="dropdown-menu">
+	            <li class="no_dec"><a href="#">Gels - Invert</a></li>
+	            <li class="no_dec"><a href="#">Gels - Label</a></li>
+	            <li class="no_dec"><a href="#">Gels - Crop</a></li>
+	            <li class="divider"></li>
+	            <li class="no_dec"><a href="#">Create New</a></li>
+	          </ul>
+	</div>
 	<%= f.submit :class => 'btn btn-info' %>
+	</div>
 	<hr />
 </div>
 
