@@ -8,7 +8,7 @@
 		
 		<br />
 
-		<button class="btn btn-primary" type="button"><%= link_to 'New Project', new_project_path %></button>
+    <%= link_to 'New Project', new_project_path, :class => "btn btn-primary" %>
 
 		<br /><br />
 
@@ -19,9 +19,9 @@
 			<h2><%= project.user %></h2>
 			<h3><%= project.description %></h3>
 
-			<button type="button" class="btn"><%= link_to 'View', project %></button>
-			<button type="button" class="btn"><%= link_to 'Edit', edit_project_path(project) %></button>
-			<button type="button" class="btn btn-danger"><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></button>
+      <%= link_to 'View', project_path, :class => "btn" %>
+      <%= link_to 'Edit', edit_project_path(project), :class => "btn" %>
+      <%= link_to 'Delete', project_path, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
 		</div>
 		<% end %>	
 	</div>
