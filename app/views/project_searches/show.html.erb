@@ -15,8 +15,7 @@
 <td><%= project.description %></td>
 <td><%= project.user %></td>
 <td><%= project.notes.length %> <%= "Note".pluralize(project.notes.length) %></td>
-<td id="project_show"><%= link_to 'View', project %></td>
-<td id="project_edit"><%= link_to 'Edit', edit_project_path(project) %></td>
+<td id="project_edit"><%= link_to 'View', edit_project_path(project) %></td>
 <td id="project_destroy"><%= link_to 'Delete', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 </tr>
 <% end %>
