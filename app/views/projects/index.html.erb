@@ -1,28 +1,29 @@
 <% content_for(:title) {"The only notebook you'll ever need" } %>
 
 <% content_for :content do %>
-	<% end %>
+<% end %>
 
-	<div class="container">
-		<h1>Projects</h1>
+<div class="container">
+	<h1>Projects</h1>
 		
-		<br />
+	<br />
 
-    <%= link_to 'New Project', new_project_path, :class => "btn btn-primary" %>
+	<%= link_to 'New Project', new_project_path, :class => "btn btn-primary" %>
 
-		<br /><br />
+	<br /><br />
 
-		<% @projects.each do |project| %>
+	<% @projects.each do |project| %>
 		<div class="projects">
 
 			<h1><%= project.name %></h1>
 			<h2><%= project.user %></h2>
 			<h3><%= project.description %></h3>
 
-      <%= link_to 'View', project_path, :class => "btn" %>
-      <%= link_to 'Edit', edit_project_path(project), :class => "btn" %>
-      <%= link_to 'Delete', project_path, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
+      		<%= link_to 'View', edit_project_path(project), :class => "btn" %>
+      		<%= link_to 'Delete', project_path(project), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
 		</div>
-		<% end %>	
-	</div>
+	
+	<% end %>	
+
+</div>
 

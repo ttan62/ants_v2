@@ -3,6 +3,7 @@ class ProjectsController < ApplicationController
   # GET /projects.json
   def index
     @projects = Project.search(params[:search])
+    puts "hello"
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @projects }

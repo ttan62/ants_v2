@@ -11,7 +11,7 @@
 </div>
 <% end %>
 <div class="field">
-	<h1><%= link_to @project.name %>: <%= f.text_field :name %> </h1>
+	<h1><%= link_to @project.name %>: <%= f.text_field :name, :placeholder => "Note Title" %> </h1>
 </div>
 
 <div class="editing">
