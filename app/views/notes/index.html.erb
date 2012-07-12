@@ -6,31 +6,39 @@
 
 <div class="container">
 
-	<h1><%= @project.name %>: Notes</h1><button type="button" class="btn"><%= link_to 'Back to Projects', projects_path %></button>
+	<h1><%= @project.name %>: Notes</h1>
+	<%= link_to 'Back to Projects', projects_path, :class => "btn" %>
 
 	<br /><br />
 
-	<button type="button" class="btn btn-success"><%= link_to 'New Note', new_project_note_path(@project) %></button>
+	<%= link_to 'New Note', new_project_note_path(@project), :class => "btn btn-success" %>
 	
 	<br /><br />
+	<div class="tabbable tabs-left">
+	  <ul class="nav nav-tabs">
+	    <li class="active rotate"><a href="#lA" data-toggle="tab">July</a></li>
+	    <li class="rotate"><a href="#lB" data-toggle="tab">June</a></li>
+	    <li class="rotate"><a href="#lC" data-toggle="tab">May</a></li>
+	   </ul>
+	   <div class="tab-content">
+	    <div class="tab-pane active" id="lA">
+	      <% @notes.each do |note| %>
+				<div class="notes">
+					<h3><%= note.name %></h3>
+					<%= note.created_at %>
+					<div class="overflow_scroll">
+						<%= note.content %>
+					</div>
 
-	<% @notes.each do |note| %>
-
- 
-	<div class="notes">
-		<h3><%= note.name %></h3>
-		<p><%= note.description %></p>
-		<p><%= note.created_at %></p>
-		<p><%= note.project_id %></p>
-		<p><%= note.note_id %></p>
-		<p><%= note.content %></p>
-
-		<%= link_to 'Open', edit_project_note_path(note.project, note), :class => "btn" %>
-		<%= link_to 'Delete', project_note_path(note.project, note), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
-
-		<!-- <button type="button" class="btn btn-danger"><%= link_to 'Delete', project_note_path(note.project, note), method: :delete, data: { confirm: 'Are you sure?' } %>
-		</button> -->
-	
+					<%= link_to 'Open', edit_project_note_path(note.project, note), :class => "btn" %>
+					<%= link_to 'Delete', project_note_path(note.project, note), method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
+				</div>
+				<% end %>
+			</div>
+	  </div>
+	  <div class="tab-pane" id="lB">
+	  </div>
+	  <div class="tab-pane" id="lC">
+	  </div>
 	</div>
-	<% end %>
 </div>

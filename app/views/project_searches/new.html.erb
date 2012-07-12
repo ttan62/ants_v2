@@ -1,28 +1,32 @@
-<% title "New Project Search" %>
+<div class="container">
+	
+	<h1>Advanced Search</h1>
+	
+	<br /><br />
 
-<%= form_for @project_search do |f| %>
-  <%= f.error_messages %>
-  <p>
-    <%= f.label :all %><br />
-    <%= f.text_field :all %>
-  </p>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
-  </p>
-  <p>
-    <%= f.label :user %><br />
-    <%= f.text_field :user %>
-  </p>
-  <p>
-    <%= f.label :tag %><br />
-    <%= f.text_field :tag %>
-  </p>
-  <p><%= f.submit %></p>
-<% end %>
+	<% title "New Project Search" %>
 
+	<%= form_for @project_search do |f| %>
+	<%= f.error_messages %>
+	
+	<%= f.text_field :all, :placeholder => "All" %>
+
+	<br /><br />
+	<%= f.text_field :name, :placeholder => "Name" %>
+
+	<br /><br />
+	<%= f.text_field :description, :placeholder => "Description" %>
+
+	<br /><br />
+	<%= f.text_field :user, :placeholder => "User" %>
+
+	<br /><br />
+	<%= f.text_field :tag, :placeholder => "Tag" %>
+
+	<br /><br /><br />
+	<%= f.submit :class => 'btn btn-info' %>
+
+	<% end %>
+
+</div>
 
